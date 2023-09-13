@@ -1,0 +1,118 @@
+body{
+  background-color: rgb(14, 20, 27);
+}
+.middle{
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #ff7700;
+  border-radius: 50px;
+  position: relative;
+top: 9rem;
+left: 9.2rem;
+  z-index: 10;
+}
+.clock {
+    border-radius: 30%;
+    background: #f9f9f9 url(./ios_clock.svg) no-repeat center;
+    background-size: 88%;
+    height: 20em;
+    margin: auto;
+    position: relative;
+    top: 20rem;
+    width: 20em;
+    box-shadow: 7px 3px 2px rgb(158, 158, 158);
+  }
+  span{
+    font-size: 25px;
+    color: rgb(255, 98, 0);
+    position: absolute;
+    top: 12.5rem;
+    left: 5.5rem;
+    z-index: 3;
+  }
+
+  .clock.simple:after {
+    background: #ffffff;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 5%;
+    height: 5%;
+    z-index: 10;
+  }
+  .minutes-container, .hours-container, .seconds-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+  }
+  .hours {
+    background: #000000;
+    height: 20%;
+    left: 48.75%;
+    position: absolute;
+    top: 30%;
+    transform-origin: 50% 100%;
+    width: 2.5%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .hours-dot {
+    background: #aeff00;
+    height: 0.5rem;
+    position: absolute;
+    top: -50%;
+    width: 0.5rem;
+    border-radius: 50px;
+  }
+
+  .minutes {
+    background: #44ff00;
+    height: 30%;
+    left: 49%;
+    position: absolute;
+    top: 18%;
+    transform-origin: 50% 100%;
+    width: 2%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .minutes-dot {
+    background: #ff6600;
+    height: 0.5rem;
+    position: absolute;
+    top: -18%;
+    width: 0.5rem;
+  border-radius: 50px;
+  }
+
+  .seconds {
+    background: #ff5e00;
+    height: 36%;
+    left: 49.5%;
+    position: absolute;
+    top: 20%;
+    transform-origin: 50% 80%;
+    width: 1%;
+    z-index: 8;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .seconds-dot {
+    background: #000000;
+    height: 0.5rem;
+    position: absolute;
+    top: -18%;
+    width: 0.5rem;
+    border-radius: 50px;
+  }
+  @keyframes rotate {
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
